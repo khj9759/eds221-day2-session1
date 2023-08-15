@@ -1,0 +1,105 @@
+---
+title: "day2-session1"
+format: html
+editor: visual
+execute: 
+  warning: false
+---
+
+## **Part 2: Making & indexing data in R**
+
+### Vectors:
+
+Making vectors
+
+```{r}
+dogs <- c("teddy", "khora", "waffle", "banjo", "tallie")
+
+# Check class of dogs 
+typeof(dogs) # lower level of resolution
+class(dogs) # high level of resolution
+```
+
+```{r}
+my_breakfast <- c ("waffle", 2, TRUE , "coffee")
+class(my_breakfast)
+```
+
+```{r}
+# Numeric value
+weights <- c(50, 60, 25, 35, 55)
+typeof(weights)
+class(weights)
+```
+
+```{r}
+# Integer vector
+weights_integer <- c(50L, 60L, 25L, 35L, 55L)
+
+typeof(weights_integer)
+class(weights_integer)
+```
+
+```{r}
+is.numeric(weights_integer)
+```
+
+```{r}
+zipcodes <- c(93105, 93514, 93101, 93401)
+class(zipcodes)
+
+# Use as. familiy of funcions to recast data classes
+# Use is. familiy of functions to ASK what class something is 
+
+zipcodes_chr <- as.character(zipcodes)
+```
+
+### Create a vector with named elements:
+
+```{r}
+dog_good <- c(teddy="purina", khora = "alpo", waffle = "fancy feast", banjo = "blue diamond", tallie = "farmer's dog")
+
+test <- c(cat = 4, dog = 10, elephant = 11)
+class(test)
+```
+
+```{r}
+dog_good[2]
+# R use 1-index 
+# Phyton and JavaScript use 0-indexing
+
+dog_good["khora"]
+dog_good["alpo"]
+```
+
+### Access ranges of values in a vector:
+
+Use: to refer to range (low : high)
+
+```{r}
+tree <- c("ponderosa", "lodgepole", "jeffrey", "sugar", "white", "bristlecone")
+
+tree[3]
+
+tree[3:5]
+```
+
+### Warm-up for for loops:
+
+```{r}
+i <- 3
+tree [i]
+```
+
+```{r}
+i <- seq(1:3) # same thing as seq(from = 1, to =3)
+tree[i]
+```
+
+### 
+
+```{r}
+tree[3] <- "OAK"
+
+tree
+```
